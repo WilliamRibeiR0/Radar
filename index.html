@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Radar 60</h1>
+        <input type="number" id="velocidade" />
+        <button onclick="verificar()">Verificar</button>
+
+        <script>
+            function verificar() {
+                const velocidade = document.querySelector("#velocidade").value;
+
+                if (velocidade === "") {
+                    alert("insira um numero valido");
+                } else if (velocidade <= 60) {
+                    document.body.style.background = "green";
+                } else {
+                    document.body.style.background = "red";
+                }
+            }
+        </script>
+    </body>
+</html>
